@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>avatarandom</title>
+<!--     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" /> -->
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      h1 { margin: 0px auto;}
+      body { font: 13px Helvetica, Arial; background: #ddd; }
+      #container {width: 800px; margin: 50px auto; top: 10%;}
+      .form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[name="username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.inline {
+  display: inline;
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div style="text-align: center"><h1>avatarandom</h1></div>
+
+    {{#imagesContainer}}
+      <div style="text-align: center"><h3><a href='/a/{{username}}.jpg'>/a/{{username}}.jpg</a></h2></div>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th width="150px"></th>
+            <th>weight</th>
+            <th>upload/replace</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{{imginput}}}
+        </tbody>
+      </table>
+    {{/imagesContainer}}
+
+    {{#login}}
+      {{#message}}<div id="message" style="text-align: center;margin: 10px auto;">{{message}}</div>{{/message}}
+      <form action="/" method="POST" class="form-signin">
+        <input type="text" name="username" value="{{username}}" class="form-control" placeholder="username"/>
+        <input type="password" name="password" class="form-control" placeholder="password" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">login / register</button>
+      </form>
+    {{/login}}
+
+      <!-- <ul id="messages"></ul> -->
+    <!-- <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form> -->
+    <div style="text-align: center"><h4><a href="http://github.com/flaming-/avatarandom">http://github.com/flaming-/avatarandom</a></h4></div>
+    </div>
+
+  </body>
+</html>
